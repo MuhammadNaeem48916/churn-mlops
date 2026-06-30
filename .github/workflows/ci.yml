@@ -30,6 +30,13 @@ jobs:
       - name: Create dataset for testing
         run: python src/create_dataset.py
 
+      - name: Debug project structure
+        run: |
+            pwd
+            ls -R
+            echo "------"
+            find . -name "churn.csv"
+
       - name: Run unit tests
         run: pytest tests/test_train.py -v
 
