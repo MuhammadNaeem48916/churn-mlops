@@ -49,7 +49,7 @@ def get_model(model_type, params):
         from sklearn.linear_model import LogisticRegression
         clf = LogisticRegression(
             C=params.get("C", 1.0),
-            class_weight="balanced",   # critical for imbalanced churn data
+            
             max_iter=params.get("max_iter", 1000),
             random_state=42
         )
